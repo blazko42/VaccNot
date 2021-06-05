@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "35S8gsQw56fCxrbHQzcivcellECA0HbAnqVGOOy14+XtZ9UpY9TXYtlNNzIfjHKL0oHE2ICFIfW7s2guN2H8VA==",
+  "success": true,
+  "projectFilePath": "G:\\Courses\\c#\\vaccineApp\\VaccNot\\VaccNot.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\david\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\david\\.nuget\\packages\\selenium.webdriver\\4.0.0-beta1\\selenium.webdriver.4.0.0-beta1.nupkg.sha512"
+  ],
+  "logs": []
+}

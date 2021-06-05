@@ -1,0 +1,35 @@
+@model List<VaccineSlot>
+
+<div class="row mb-4">
+    <div class="col">
+        <h2><a target="_blank" href="https://programare.vaccinare-covid.gov.ro/auth/login">Quick Login</a></h2>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col">
+        <h3>Sloturi active: @Model.Count.</h3>
+    </div>
+</div>
+
+@foreach (VaccineSlot slot in Model)
+{
+    if (slot.AvailableSlots > 0)
+    {
+        <div class="row mb-4">
+            <div class="col">
+                <p>Vaccin disponibil: <span style="color: red;">@((Booster)slot.BoosterId) (@slot.BoosterId)</span>;
+                    @slot.AvailableSlots locuri disponibile la centrul
+                    @slot.Name in @slot.CountyName, @slot.LocalityName.</p>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="row mb-4">
+            <div class="col">
+                <h4>Niciun loc de vaccin disponibil. </h4>
+            </div>
+        </div>
+    }
+}

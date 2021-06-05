@@ -1,0 +1,86 @@
+﻿@model Settings;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="col">
+        <div class="text-center">
+            <h1 class="display-4">Welcome!</h1>
+        </div>
+    </div>
+</div>
+<div class="row mb-4">
+    <div class="col">
+        <h4>Settings:</p>
+    </div>
+</div>
+<div class="row mb-4">
+    <div class="col">
+        <input class="form-control" type="text" placeholder="URL" value="@Model.URL" width="50%">
+    </div>
+</div>
+<div class="row mb-4">
+    <div class="col">
+        <input class="form-control" type="text" placeholder="CountyId" value="@Model.CountyId" width="50%">
+    </div>
+</div>
+<div class="row mb-4">
+    <div class="col">
+        <input class="form-control" type="text" placeholder="IdentificationCode" value="@Model.IdentificationCode"
+            width="50%">
+    </div>
+</div>
+<div class="row mb-4">
+    <div class="col">
+        <input class="form-control" type="text" placeholder="LocalityID" value="@Model.LocalityID" width="50%">
+    </div>
+</div>
+<div class="row mb-4">
+    <div class="col">
+        <input class="form-control" type="text" placeholder="MasterPersonnelCategoryId"
+            value="@Model.MasterPersonnelCategoryId" width="50%">
+    </div>
+</div>
+<div class="row mb-4">
+    <div class="col">
+        <input class="form-control" type="text" placeholder="Name" value="@Model.Name" width="50%">
+    </div>
+</div>
+<div class="row mb-4">
+    <div class="col">
+        <input class="form-control" type="text" placeholder="PersonnelCategoryID" value="@Model.PersonnelCategoryID"
+            width="50%">
+    </div>
+</div>
+<div class="row mb-4">
+    <div class="col">
+        <input class="form-control" type="text" placeholder="RecipientID" value="@Model.RecipientID" width="50%">
+    </div>
+</div>
+<div class="row mb-4">
+    <div class="col">
+        <input class="form-control" type="text" placeholder="Cookie" value="@Model.Cookie" width="50%">
+    </div>
+</div>
+
+<div clas="row mb-4">
+    <div class="col">
+        <h4>Now press the buttons below to start watching for COVID19 vaccine slots or check slots.</h4>
+    </div>
+</div>
+<div class="row">
+    <div class="col-6">
+        <button class="btn btn-info" style="width: 100%;"
+            onclick="location.href='@Url.Action("VaccineSlotsCheck", "Home", Model)'">
+            Check slots
+        </button>
+    </div>
+    <div class="col-6">
+        <button class="btn btn-primary" style="width: 100%;"
+            onclick="location.href='@Url.Action("VaccineSlotsWatch", "Home", Model)'">
+            Start Watch
+        </button>
+    </div>
+</div>
